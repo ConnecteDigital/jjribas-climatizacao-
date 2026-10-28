@@ -47,3 +47,10 @@ Tamanho recomendado: 1264 x 848 px (a do início, 1152 x 928 px).
 Site estático, pronto para Vercel (`vercel.json` com URLs limpas). Antes de publicar
 no domínio final, troque `www.jjribasclimatizacao.com.br` em `build.py`, `sitemap.xml`,
 `robots.txt` e nos dados estruturados das páginas.
+
+## Logo
+
+- `img/logo-marca.png` – símbolo usado no topo, ao lado do nome
+- `img/logo-branca.png` – logo completa para fundo escuro (rodapé)
+- `img/logo.png` – logo completa para fundo claro
+- `img/favicon.png` e `img/apple-touch-icon.png` – ícones do navegador e do celular
