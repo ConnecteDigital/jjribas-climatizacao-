@@ -33,7 +33,7 @@
 
   // Animação de entrada dos blocos
   var targets = document.querySelectorAll(
-    ".section__head, .service, .pmoc__steps li, .segment, .benefit, .cities li, .faq details, .feature"
+    ".section__head, .service, .steps li, .segment, .benefit, .cities li, .faq details, .feature, .detail, .post-card, .plan, .city, .info-card"
   );
   if ("IntersectionObserver" in window) {
     var io = new IntersectionObserver(function (entries) {
@@ -53,7 +53,7 @@
   // Formulário -> WhatsApp com mensagem pronta
   var form = document.getElementById("contactForm");
   var error = document.getElementById("formError");
-  form.addEventListener("submit", function (e) {
+  if (form) form.addEventListener("submit", function (e) {
     e.preventDefault();
     var data = new FormData(form);
     var required = ["nome", "cidade", "servico"];

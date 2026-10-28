@@ -1,0 +1,83 @@
+<!--
+title: Contato | Solicite seu Orçamento | JJ Ribas Climatização
+description: Solicite orçamento de instalação, manutenção, higienização de ar-condicionado ou PMOC. WhatsApp e telefone (51) 98051-5585.
+nav: contato
+-->
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Você está em"><a href="{{root}}index.html">Início</a> <span>/</span> Contato</nav>
+        <h1>Fale com a JJ Ribas Climatização</h1>
+        <p>Solicite seu orçamento pelo formulário, pelo WhatsApp ou por telefone. Respondemos o mais rápido possível.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact">
+        <div class="contact__info">
+          <h2>Canais de atendimento</h2>
+          <div class="contact-cards">
+            <a href="{{wa:Olá! Vim pelo site e gostaria de um orçamento.}}" target="_blank" rel="noopener" class="contact-card contact-card--whats">
+              {{icon:whats}}
+              <span><strong>WhatsApp</strong>{{phone}}</span>
+            </a>
+            <a href="{{tel}}" class="contact-card contact-card--call">
+              {{icon:phone}}
+              <span><strong>Telefone</strong>{{phone}}</span>
+            </a>
+            <div class="contact-card">
+              {{icon:pin}}
+              <span><strong>Área de atendimento</strong>Porto Alegre, Canoas, Sapucaia do Sul e São Leopoldo</span>
+            </div>
+          </div>
+          <p class="note">Ao enviar o formulário, você será direcionado ao nosso WhatsApp com a mensagem já preenchida.</p>
+        </div>
+
+        <form class="form" id="contactForm" novalidate>
+          <h2>Solicite seu orçamento</h2>
+          <div class="form__row">
+            <label>
+              <span>Nome *</span>
+              <input type="text" name="nome" required autocomplete="name" placeholder="Seu nome">
+            </label>
+            <label>
+              <span>Empresa</span>
+              <input type="text" name="empresa" autocomplete="organization" placeholder="Nome da empresa">
+            </label>
+          </div>
+          <div class="form__row">
+            <label>
+              <span>Cidade *</span>
+              <select name="cidade" required>
+                <option value="">Selecione</option>
+                <option>Porto Alegre</option>
+                <option>Canoas</option>
+                <option>Sapucaia do Sul</option>
+                <option>São Leopoldo</option>
+                <option>Outra</option>
+              </select>
+            </label>
+            <label>
+              <span>Serviço *</span>
+              <select name="servico" required>
+                <option value="">Selecione</option>
+                <option>Instalação</option>
+                <option>Manutenção</option>
+                <option>Higienização</option>
+                <option>Contrato de PMOC</option>
+                <option>Outro</option>
+              </select>
+            </label>
+          </div>
+          <label>
+            <span>Quantidade de equipamentos (aproximada)</span>
+            <input type="text" name="equipamentos" placeholder="Ex.: 8 splits de 12.000 BTUs">
+          </label>
+          <label>
+            <span>Mensagem</span>
+            <textarea name="mensagem" rows="4" placeholder="Conte um pouco sobre sua necessidade"></textarea>
+          </label>
+          <p class="form__error" id="formError" role="alert" hidden>Preencha nome, cidade e serviço para continuar.</p>
+          <button type="submit" class="btn btn--whats btn--block">{{icon:whats}} Enviar pelo WhatsApp</button>
+        </form>
+      </div>
+    </section>

@@ -1,34 +1,49 @@
 # JJ Ribas Climatização
 
-Site institucional (HTML, CSS e JS puros, sem build) com foco em atendimento empresarial:
+Site institucional (HTML, CSS e JS puros) com foco em atendimento empresarial:
 instalação, manutenção, higienização e contratos de PMOC em Porto Alegre, Canoas,
 Sapucaia do Sul e São Leopoldo.
 
-## Estrutura
+## Páginas
+
+| Página           | Arquivo               |
+| ---------------- | --------------------- |
+| Início           | `index.html`          |
+| Serviços         | `servicos.html`       |
+| PMOC             | `pmoc.html`           |
+| Para empresas    | `para-empresas.html`  |
+| Onde atendemos   | `onde-atendemos.html` |
+| Dúvidas          | `duvidas.html`        |
+| Blog (6 artigos) | `blog.html`, `blog/`  |
+| Contato          | `contato.html`        |
+
+## Como editar
+
+As páginas na raiz são **geradas**. Edite sempre os arquivos em `_src/` e depois rode:
 
 ```
-index.html          Página única com todas as seções
-css/style.css       Estilos e responsividade
-js/main.js          Menu mobile, animações e formulário -> WhatsApp
-img/                Logo, favicon, hero, mapa e imagem de compartilhamento
-img/servicos/       Imagens dos quatro serviços
+python3 build.py
 ```
+
+- `_src/partials/` – topo, menu, rodapé, faixa de orçamento e botões flutuantes (comuns a todas as páginas)
+- `_src/pages/` – conteúdo de cada página e dos artigos do blog
+
+Dentro do HTML, `{{wa:mensagem}}` vira o link do WhatsApp com a mensagem pronta,
+`{{tel}}` o link de ligação e `{{phone}}` o telefone formatado. O número fica em `build.py`.
 
 ## Contato configurado
 
 - Telefone e WhatsApp: (51) 98051-5585
-- Botão flutuante de ligação à esquerda e de WhatsApp à direita
+- Botão flutuante de ligação (vermelho) à esquerda e de WhatsApp (verde) à direita
 - O formulário de contato monta a mensagem e abre o WhatsApp
 
-## Trocar imagens
+## Imagens
 
-As imagens atuais são ilustrações. Para usar fotos, coloque os arquivos em
-`img/servicos/` (ex.: `instalacao.jpg`) e atualize o `src` correspondente em `index.html`.
-Tamanho recomendado: 1200 x 800 px (proporção 3:2).
+Fotos em `img/fotos/` (geradas por IA). Para trocar, substitua o arquivo mantendo o nome.
+Tamanho recomendado: 1264 x 848 px (a do início, 1152 x 928 px).
 
-O logo fica em `img/logo.svg`.
+## Publicação
 
-## Visualizar
-
-Basta abrir `index.html` no navegador, ou publicar a pasta em qualquer hospedagem
-estática (Vercel, Netlify, GitHub Pages, Hostinger etc.).
+Site estático, pronto para Vercel (`vercel.json` com URLs limpas). Antes de publicar
+no domínio final, troque `www.jjribasclimatizacao.com.br` em `build.py`, `sitemap.xml`,
+`robots.txt` e nos dados estruturados das páginas.

@@ -1,0 +1,35 @@
+
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <span>Atendimento empresarial em Porto Alegre e Região Metropolitana</span>
+      <a href="{{tel}}" class="topbar__phone">{{icon:phone}} {{phone}}</a>
+    </div>
+  </div>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="{{root}}index.html" class="logo" aria-label="JJ Ribas Climatização - página inicial">
+        <img src="{{root}}img/logo.svg" alt="" width="44" height="44">
+        <span class="logo__text">
+          <strong>JJ Ribas</strong>
+          <small>Climatização</small>
+        </span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Menu principal">
+        <a href="{{root}}index.html"{{active:inicio}}>Início</a>
+        <a href="{{root}}servicos.html"{{active:servicos}}>Serviços</a>
+        <a href="{{root}}pmoc.html"{{active:pmoc}}>PMOC</a>
+        <a href="{{root}}para-empresas.html"{{active:empresas}}>Para empresas</a>
+        <a href="{{root}}onde-atendemos.html"{{active:atendimento}}>Onde atendemos</a>
+        <a href="{{root}}duvidas.html"{{active:duvidas}}>Dúvidas</a>
+        <a href="{{root}}blog.html"{{active:blog}}>Blog</a>
+        <a href="{{root}}contato.html"{{active:contato}}>Contato</a>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
