@@ -52,6 +52,5 @@ no domínio final, troque `www.jjribasclimatizacao.com.br` em `build.py` (o `sit
 ## Logo
 
 - `img/logo-marca.png` – símbolo usado no topo, ao lado do nome
-- `img/logo-branca.png` – logo completa para fundo escuro (rodapé)
-- `img/logo.png` – logo completa para fundo claro
+- `img/logo.png` – logo completa (rodapé e dados do Google); funciona em fundo claro e escuro
 - `img/favicon.png` e `img/apple-touch-icon.png` – ícones do navegador e do celular
