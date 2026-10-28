@@ -32,6 +32,7 @@ ROOT = Path(__file__).parent
 SRC = ROOT / "_src"
 PHONE_DIGITS = "5551980515585"
 PHONE_DISPLAY = "(51) 98051-5585"
+PHONE_TEL = "051980515585"  # link dos botões de ligação (tel:051 98051-5585)
 SITE_URL = "https://www.jjribasclimatizacao.com.br/"
 
 ICONS = {
@@ -69,7 +70,7 @@ def render(html, meta, rel):
     html = html.replace("{{og_image}}", meta.get("og_image", "img/fotos/hero.jpg"))
     html = html.replace("{{canonical}}", canonical)
     html = html.replace("{{root}}", root)
-    html = html.replace("{{tel}}", "tel:+" + PHONE_DIGITS)
+    html = html.replace("{{tel}}", "tel:" + PHONE_TEL)
     html = html.replace("{{phone}}", PHONE_DISPLAY)
     html = re.sub(
         r"\{\{wa:(.*?)\}\}",

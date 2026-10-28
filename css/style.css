@@ -59,6 +59,7 @@ p { margin: 0 0 1em; }
 .shadow { box-shadow: var(--shadow-lg); }
 .note { color: var(--muted); font-size: 15px; margin-top: 20px; }
 .icon { width: 1.25em; height: 1.25em; fill: currentColor; flex: none; }
+.only-mobile { display: none; }
 
 /* Botões ------------------------------------------------------------------ */
 .btn {
@@ -153,8 +154,9 @@ p { margin: 0 0 1em; }
 .hero {
   position: relative;
   background:
-    radial-gradient(circle at 85% 20%, rgba(142, 205, 247, .22), transparent 45%),
-    linear-gradient(135deg, var(--navy-900) 0%, var(--navy-800) 55%, var(--navy-700) 100%);
+    linear-gradient(180deg, rgba(7, 26, 51, .78) 0%, rgba(11, 37, 69, .72) 55%, rgba(7, 26, 51, .9) 100%),
+    url("../img/fotos/fundo-inicio.jpg") center / cover no-repeat,
+    var(--navy-800);
   color: #d4e2f1;
   overflow: hidden;
 }
@@ -497,7 +499,9 @@ a.contact-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
   .topbar__inner { justify-content: center; }
   .segments, .benefits, .posts, .steps--grid { grid-template-columns: 1fr; }
 
-  /* Início no celular: título menor e diferenciais lado a lado */
+  /* Início no celular: título e descrição mais curtos, diferenciais lado a lado */
+  .only-desktop { display: none; }
+  .only-mobile { display: inline; }
   .hero__inner { padding: 44px 0 84px; }
   .hero h1 { font-size: 25px; }
   .hero__lead { font-size: 16px; }
