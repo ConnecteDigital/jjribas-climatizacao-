@@ -16,6 +16,7 @@ Sapucaia do Sul e São Leopoldo.
 | Dúvidas          | `duvidas.html`        |
 | Blog (6 artigos) | `blog.html`, `blog/`  |
 | Contato          | `contato.html`        |
+| Páginas por cidade | `ar-condicionado-porto-alegre.html`, `ar-condicionado-canoas.html`, `ar-condicionado-sapucaia-do-sul.html`, `ar-condicionado-sao-leopoldo.html` |
 
 ## Como editar
 
@@ -45,8 +46,8 @@ Tamanho recomendado: 1264 x 848 px (a do início, 1152 x 928 px).
 ## Publicação
 
 Site estático, pronto para Vercel (`vercel.json` com URLs limpas). Antes de publicar
-no domínio final, troque `www.jjribasclimatizacao.com.br` em `build.py`, `sitemap.xml`,
-`robots.txt` e nos dados estruturados das páginas.
+no domínio final, troque `www.jjribasclimatizacao.com.br` em `build.py` (o `sitemap.xml`
+é gerado a partir dele), `robots.txt` e nos dados estruturados das páginas.
 
 ## Logo
 

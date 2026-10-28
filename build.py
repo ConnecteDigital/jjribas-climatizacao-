@@ -11,7 +11,8 @@ Cada arquivo em _src/pages/ começa com um bloco de metadados:
 
 e o restante é o conteúdo do <main>. O cabeçalho, o rodapé e os botões
 flutuantes vêm de _src/partials/. O resultado é gravado na raiz do projeto,
-mantendo as subpastas (ex.: _src/pages/blog/x.html -> blog/x.html).
+mantendo as subpastas (ex.: _src/pages/blog/x.html -> blog/x.html), e o
+sitemap.xml é atualizado com todas as páginas.
 
 Marcadores disponíveis no HTML:
     {{root}}          caminho relativo até a raiz ("" ou "../")
@@ -98,6 +99,16 @@ def main():
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(render(html, meta, rel), encoding="utf-8")
         print("ok", rel)
+
+    urls = "\n".join(
+        f"  <url><loc>{SITE_URL}{'' if r == 'index.html' else r.removesuffix('.html')}</loc></url>"
+        for r in (p.relative_to(SRC / "pages").as_posix() for p in pages)
+    )
+    (ROOT / "sitemap.xml").write_text(
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + urls + "\n</urlset>\n",
+        encoding="utf-8",
+    )
 
     unresolved = [p for p in pages if "{{" in (ROOT / p.relative_to(SRC / "pages")).read_text(encoding="utf-8")]
     if unresolved:
