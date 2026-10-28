@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 560">
+  <defs>
+    <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f3f6fa"/>
+      <stop offset="1" stop-color="#dfe6ee"/>
+    </linearGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b98d63"/>
+      <stop offset="1" stop-color="#8c6542"/>
+    </linearGradient>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8fc4ee"/>
+      <stop offset="1" stop-color="#d9ecfa"/>
+    </linearGradient>
+    <linearGradient id="unit" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".7" stop-color="#eef2f6"/>
+      <stop offset="1" stop-color="#cfd8e2"/>
+    </linearGradient>
+    <linearGradient id="air" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8ecdf7" stop-opacity=".7"/>
+      <stop offset="1" stop-color="#8ecdf7" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="desk" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f7f7f7"/>
+      <stop offset="1" stop-color="#d9dde2"/>
+    </linearGradient>
+    <linearGradient id="light" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fff" stop-opacity=".0"/>
+      <stop offset=".5" stop-color="#fff" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#0b2545" flood-opacity=".18"/>
+    </filter>
+  </defs>
+
+  <!-- Parede e piso -->
+  <rect width="640" height="560" fill="url(#wall)"/>
+  <rect y="430" width="640" height="130" fill="url(#floor)"/>
+  <g stroke="#7a5638" stroke-opacity=".35">
+    <path d="M0 460h640M0 495h640M0 530h640"/>
+    <path d="M90 430v30M260 430v30M430 430v30M600 430v30M170 460v35M350 460v35M520 460v35M60 495v35M240 495v35M410 495v35M580 495v35"/>
+  </g>
+  <rect y="424" width="640" height="8" fill="#c9d2dc"/>
+
+  <!-- Janela com vista da cidade -->
+  <g>
+    <rect x="360" y="150" width="250" height="230" rx="4" fill="#5e6e80"/>
+    <rect x="368" y="158" width="234" height="214" fill="url(#sky)"/>
+    <g fill="#6c8aa8" opacity=".85">
+      <rect x="372" y="280" width="26" height="92"/>
+      <rect x="402" y="250" width="34" height="122"/>
+      <rect x="440" y="295" width="22" height="77"/>
+      <rect x="466" y="232" width="40" height="140"/>
+      <rect x="510" y="270" width="28" height="102"/>
+      <rect x="542" y="300" width="22" height="72"/>
+      <rect x="568" y="262" width="32" height="110"/>
+    </g>
+    <g fill="#e8f3fc" opacity=".7">
+      <rect x="408" y="260" width="6" height="8"/><rect x="420" y="260" width="6" height="8"/>
+      <rect x="408" y="278" width="6" height="8"/><rect x="420" y="278" width="6" height="8"/>
+      <rect x="474" y="244" width="6" height="8"/><rect x="486" y="244" width="6" height="8"/>
+      <rect x="474" y="262" width="6" height="8"/><rect x="486" y="262" width="6" height="8"/>
+      <rect x="474" y="280" width="6" height="8"/><rect x="486" y="280" width="6" height="8"/>
+      <rect x="576" y="274" width="6" height="8"/><rect x="588" y="274" width="6" height="8"/>
+    </g>
+    <rect x="482" y="158" width="6" height="214" fill="#5e6e80"/>
+    <rect x="368" y="158" width="234" height="214" fill="url(#light)"/>
+    <rect x="352" y="378" width="266" height="10" rx="2" fill="#c9d2dc"/>
+  </g>
+
+  <!-- Ar-condicionado split -->
+  <g filter="url(#soft)">
+    <rect x="60" y="70" width="290" height="96" rx="16" fill="url(#unit)"/>
+    <rect x="60" y="138" width="290" height="28" rx="10" fill="#dbe2ea"/>
+    <rect x="76" y="146" width="258" height="10" rx="5" fill="#7d8ea1"/>
+    <path d="M78 151h254" stroke="#5b6b7c" stroke-width="2"/>
+    <rect x="78" y="88" width="160" height="3" rx="1.5" fill="#e2e8ee"/>
+    <circle cx="318" cy="102" r="4" fill="#2bd46f"/>
+    <rect x="270" y="112" width="58" height="20" rx="4" fill="#1a2a3c"/>
+    <text x="299" y="127" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#8ecdf7">22°C</text>
+  </g>
+
+  <!-- Fluxo de ar frio -->
+  <g fill="none" stroke="url(#air)" stroke-width="5" stroke-linecap="round">
+    <path d="M100 178c20 40 -10 70 15 120"/>
+    <path d="M160 178c20 45 -12 80 14 140"/>
+    <path d="M220 178c22 45 -10 85 16 150"/>
+    <path d="M280 178c20 40 -8 75 16 130"/>
+  </g>
+  <g fill="#8ecdf7" opacity=".6">
+    <circle cx="130" cy="230" r="3"/><circle cx="190" cy="262" r="2.5"/><circle cx="250" cy="240" r="3"/>
+    <circle cx="300" cy="270" r="2"/><circle cx="110" cy="300" r="2"/>
+  </g>
+
+  <!-- Mesa de escritório -->
+  <g>
+    <ellipse cx="200" cy="432" rx="170" ry="8" fill="#5c3f28" opacity=".35"/>
+    <rect x="40" y="350" width="320" height="16" rx="3" fill="url(#desk)"/>
+    <rect x="56" y="366" width="8" height="64" fill="#9aa6b4"/>
+    <rect x="336" y="366" width="8" height="64" fill="#9aa6b4"/>
+    <!-- Monitor -->
+    <rect x="150" y="262" width="130" height="80" rx="6" fill="#1a2a3c"/>
+    <rect x="156" y="268" width="118" height="66" rx="3" fill="#2b5c8f"/>
+    <path d="M164 318l22-18 18 10 26-24 22 16" fill="none" stroke="#8ecdf7" stroke-width="3"/>
+    <rect x="207" y="342" width="16" height="8" fill="#5b6b7c"/>
+    <rect x="190" y="348" width="50" height="4" rx="2" fill="#5b6b7c"/>
+    <!-- Caneca e documentos -->
+    <rect x="300" y="326" width="22" height="24" rx="4" fill="#0f6bd8"/>
+    <path d="M322 332c8 0 8 12 0 12" fill="none" stroke="#0f6bd8" stroke-width="3"/>
+    <rect x="70" y="340" width="56" height="10" rx="2" fill="#fff" stroke="#cfd8e2"/>
+    <rect x="74" y="332" width="50" height="8" rx="2" fill="#f6f8fa" stroke="#cfd8e2"/>
+  </g>
+
+  <!-- Cadeira -->
+  <g>
+    <rect x="200" y="372" width="70" height="40" rx="10" fill="#2b3e55"/>
+    <rect x="230" y="412" width="10" height="16" fill="#5b6b7c"/>
+    <path d="M205 432h60" stroke="#3a4b60" stroke-width="5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Planta -->
+  <g>
+    <path d="M560 430l-8-50h56l-8 50z" fill="#e7ecf1" stroke="#c4ced8"/>
+    <path d="M580 382c-30-30-40-70-20-100 6 30 18 60 20 100z" fill="#2f8f57"/>
+    <path d="M582 382c10-40 30-70 60-80-12 30-30 60-60 80z" fill="#3aa766"/>
+    <path d="M578 384c-20-10-50-20-70-50 30 4 55 22 70 50z" fill="#2a7d4c"/>
+    <path d="M584 384c4-40 0-90 -10-120 26 26 30 80 10 120z" fill="#46b875"/>
+  </g>
+
+  <!-- Termômetro / conforto -->
+  <g transform="translate(462 72)" filter="url(#soft)">
+    <rect width="150" height="58" rx="14" fill="#fff"/>
+    <circle cx="30" cy="29" r="16" fill="#e8f4fd"/>
+    <path d="M30 18v13" stroke="#0f6bd8" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="30" cy="34" r="5" fill="#0f6bd8"/>
+    <text x="56" y="26" font-family="Arial, sans-serif" font-size="11" fill="#5b6b7c">Conforto térmico</text>
+    <text x="56" y="45" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#0b2545">Ideal • 22°C</text>
+  </g>
+</svg>
